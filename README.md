@@ -1,11 +1,11 @@
 <h1 align="center">Remeet 2</h1>
-<h3 align="center">Smart meeting room display and door access panel, with a device-driver layer on embedded Linux</h3>
+<h3 align="center">IoT meeting-room panel with RFID, NFC, and fingerprint access, battery backup, and calendar integration</h3>
 
 <p align="center">
   <img src="docs/images/Remeet-2-Right-Black.png" alt="Remeet 2 meeting room display" width="720">
 </p>
 
-> **Remeet 2** is an IoT meeting-room panel mounted beside doors. It shows room status and schedules, unlocks the door, and is managed from mobile and web apps.
+> **Remeet 2** is the second generation of the Remeet meeting-room panel, mounted beside doors. It shows room status and schedules, authenticates users with RFID, NFC, or fingerprint, and keeps running on battery when mains power is lost. The vertical display connects to Outlook, Google, and other calendar platforms.
 >
 > As **Senior Embedded Systems (IoT) Engineer** at [Novaday Co.](https://novaday.ir/), I designed the hardware and engineered the embedded software for Remeet 2, from PCB design through firmware, the Embedded Linux platform, and the device-driver layer that connects application code to the hardware. Remeet 2 is a commercial product of Novaday.
 
@@ -19,8 +19,8 @@ I was the hands-on engineer behind Remeet 2, responsible for the hardware design
 
 | Area | What I did |
 |------|------------|
-| **Hardware design** | Designed the Remeet 2 PCB and electronics, sized for a 10.1-inch display, wall and door mounting, and a concealed-wiring enclosure |
-| **Platform customization** | Customized the Remeet2 product platform for meeting management, covering room booking, schedules, access control, and on-device room information |
+| **Hardware design** | Designed the Remeet 2 PCB and electronics, including RFID, NFC, and fingerprint sensing, battery backup, and a vertical display |
+| **Platform customization** | Customized the Remeet 2 platform for meeting management, covering room booking, schedules, access control, and on-device room information |
 | **Device-driver layer** | Created a **C++ / C / Bash device-driver abstraction layer** that bridges application developers with low-level Linux services, **Device Tree**, and **U-Boot** |
 | **Embedded software** | Engineered the device software in C/C++ on embedded Linux, from boot configuration to application features |
 
@@ -28,21 +28,27 @@ I was the hands-on engineer behind Remeet 2, responsible for the hardware design
 
 | Category | Expertise |
 |----------|-----------|
-| **Hardware** | PCB design · Hardware design · ARM Cortex |
+| **Hardware** | PCB design · Hardware design · RFID / NFC · Fingerprint sensing · Battery backup · ARM Cortex |
 | **Embedded Linux** | Embedded Linux · Device Tree · U-Boot · Device drivers · Driver abstraction layers |
 | **Firmware** | Embedded C / C++ · Bare-metal firmware |
-| **IoT** | IoT connectivity · Cloud and on-premise deployment |
+| **IoT** | IoT connectivity · Calendar integration (Outlook, Google) · Cloud and on-premise deployment |
 | **Tooling** | Bash · Build and system scripting |
 
 ---
 
 ## Product at a Glance
 
-Remeet 2 turns any meeting room into a managed space. The device sits beside the door and shows who is using the room now and what is coming next. People book rooms from a mobile app or the web, and the same system unlocks the door, so no keys or phone calls are needed to coordinate a meeting.
+Remeet 2 turns any meeting room into a managed space. The vertical display sits beside the door and shows who is using the room now and what is coming next. People book rooms from their calendar platform, a mobile app, or the web, and the same system unlocks the door. Users authenticate with an RFID card, an NFC device, or a fingerprint, so no keys or phone calls are needed to coordinate a meeting.
 
 ---
 
 ## Key Features
+
+**What is new in Remeet 2**
+- **RFID, NFC, and fingerprint authentication** on the device
+- **Battery backup** keeps the panel running during a power outage
+- **Vertical display** instead of the horizontal layout in Remeet 1
+- **Calendar integration** with Outlook, Google, and other calendar platforms
 
 **Meetings and rooms**
 - Reserve meetings from the device, the mobile app, or the web app
@@ -54,7 +60,7 @@ Remeet 2 turns any meeting room into a managed space. The device sits beside the
 **Access control**
 - Unlock the door remotely from the app or web
 - Per-user access levels set by the organization
-- QR-code unlocking, with movement logged per participant
+- RFID, NFC, and fingerprint credentials, plus QR-code unlocking with movement logged per participant
 - Per-device passwords, so the door can be opened from the device keypad even without the software
 
 **Display and branding**
@@ -72,19 +78,13 @@ Remeet 2 turns any meeting room into a managed space. The device sits beside the
 
 ## Hardware
 
-Custom PCB designed in-house for the device's electronics. The table below lists the physical and product-level specifications.
-
 | Parameter | Value |
 |-----------|-------|
-| Display | 10.1-inch |
-| Dimensions | 26.5 × 16 × 7 cm |
-| Enclosure | High-quality aluminum |
-| Colors | Black, silver, white, or custom |
-| Viewing angle | Adjustable up to 30° |
-| Wiring | Concealed |
+| Display orientation | Vertical |
+| Authentication | RFID, NFC, fingerprint, and QR code |
+| Power | Mains supply with battery backup |
 | Connectivity | Wi-Fi or LAN |
-| Power | Mains supply at the installation site |
-| Mounting | Wall or partition |
+| Calendar integration | Outlook, Google, and other calendar platforms |
 
 ---
 
@@ -95,7 +95,7 @@ Application code does not talk to the hardware directly. The driver abstraction 
 ```mermaid
 flowchart TB
     subgraph App["Application"]
-        MM["Meeting management<br/>booking, schedule, access, display"]
+        MM["Meeting management<br/>booking, schedule, access, display, calendar sync"]
     end
 
     subgraph DAL["Device-driver abstraction layer (C++ / C / Bash)"]
@@ -118,7 +118,7 @@ flowchart TB
 
 | Layer | Technology | Role |
 |-------|------------|------|
-| Application | C++ | Meeting management and device features |
+| Application | C++ | Meeting management, calendar sync, and device features |
 | Abstraction layer | C++, C | Hides low-level device access behind one interface |
 | Tooling | Bash | Build and system-level helper scripts |
 | Linux | Device Tree, kernel drivers | Hardware description and device access |
@@ -130,7 +130,7 @@ flowchart TB
 
 This repository is a **portfolio description** of my work on Remeet 2. I **cannot publish the schematics or the source code** because of copyright. Both belong to **[Novaday Co. (شرکت نوادی)](https://novaday.ir/)**, the company that owns the Remeet product, and all rights are reserved.
 
-The public materials in this repository (README, brochure, and images) are the only parts shared here. To order a device or request a consultation, use the official product page:
+The public materials in this repository are the only parts shared here. To order a device or request a consultation, use the official product page:
 
 - Company: <https://novaday.ir/>
 - Order and product preview: <https://remeet.ir/pages/preview.html>
