@@ -128,7 +128,7 @@ flowchart TB
 
 ## Note on Confidentiality
 
-This repository is a **portfolio description** of my work on Remeet 2. I **cannot publish the schematics or the source code** because of copyright. Both belong to **[Novaday Co. (شرکت نوادی)](https://novaday.ir/)**, the company that owns the Remeet product, and all rights are reserved.
+This repository is a **portfolio description** of my work on Remeet 2. I **cannot publish the schematics or the source code** because of copyright. Both belong to **[Novaday Co.](https://novaday.ir/)**, the company that owns the Remeet product, and all rights are reserved.
 
 The public materials in this repository are the only parts shared here. To order a device or request a consultation, use the official product page:
 
