@@ -40,10 +40,6 @@ I was the hands-on engineer behind Remeet 2, responsible for the hardware design
 
 Remeet 2 turns any meeting room into a managed space. The device sits beside the door and shows who is using the room now and what is coming next. People book rooms from a mobile app or the web, and the same system unlocks the door, so no keys or phone calls are needed to coordinate a meeting.
 
-<p align="center">
-  <img src="docs/images/remeet-mobile-app.jpg" alt="Remeet mobile app showing spaces and devices" width="520">
-</p>
-
 ---
 
 ## Key Features
@@ -89,10 +85,6 @@ Custom PCB designed in-house for the device's electronics. The table below lists
 | Connectivity | Wi-Fi or LAN |
 | Power | Mains supply at the installation site |
 | Mounting | Wall or partition |
-
-<p align="center">
-  <img src="docs/images/remeet-2-dimensions.jpg" alt="Remeet 2 dimensions: 26.5 x 16 cm" width="620">
-</p>
 
 ---
 
