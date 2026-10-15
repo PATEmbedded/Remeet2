@@ -7,7 +7,7 @@
 
 > **Remeet 2** is the second generation of the Remeet meeting-room panel, mounted beside doors. It shows room status and schedules, authenticates users by fingerprint, RFID, or NFC, controls the door, and keeps running for about three hours on its own battery when mains power is lost. The vertical display connects to Outlook, Google, and other calendar platforms.
 >
-> As **Senior Embedded Systems (IoT) Engineer** at [Novaday Co.](https://novaday.ir/), I led the redesign from Remeet 1 to Remeet 2. I designed the **complete hardware end to end**, including **two PCBs built from scratch on my own system architecture**. I programmed **every low-level sensor and actuator** and wrote the drivers that expose them to the backend. I also developed a major part of the embedded software, covering firmware, the Embedded Linux platform, boot optimization, and the device-driver layer, and **led the product's IoT networking**. Remeet 2 is a commercial product of Novaday.
+> As **Senior Embedded Systems Engineer** at [Novaday Co.](https://novaday.ir/), I led the redesign from Remeet 1 to Remeet 2. I designed the **complete hardware end to end**, including **two PCBs built from scratch on my own system architecture**. I programmed **every low-level sensor and actuator** and wrote the drivers that expose them to the backend. I also developed a major part of the embedded software, covering firmware, the Embedded Linux platform, boot optimization, and the device-driver layer, and **led the product's IoT networking**. Remeet 2 is a commercial product of Novaday.
 
 ---
 
@@ -28,7 +28,7 @@
 
 ## My Role
 
-**Senior Embedded Systems (IoT) Engineer**, [Novaday Co.](https://novaday.ir/)
+**Senior Embedded Systems Engineer**, [Novaday Co.](https://novaday.ir/)
 
 I was the hands-on engineer behind Remeet 2. I owned the hardware **from concept to production**, wrote the low-level software for every sensor and actuator, developed a major part of the embedded software, and led the IoT networking that connects the device to the rest of the platform. The product itself is owned by Novaday Co.
 
@@ -43,7 +43,7 @@ I was the hands-on engineer behind Remeet 2. I owned the hardware **from concept
 | **Low-level sensor and actuator software** | Programmed **every sensor and actuator** in the device's lower layer and wrote backend-ready drivers for each one, so the application and backend teams use them through a clean interface |
 | **Embedded software** | Developed a major part of the device software in C/C++ on embedded Linux, including the fingerprint, RFID, and NFC readers, power and battery monitoring, audio, lighting, and display orientation |
 | **IoT networking** | Led all IoT networking work for the product, including device connectivity and messaging over **MQTT** and **REST API** |
-| **IO Controller** | Built the **IO Controller**, a companion device, and connected it to Remeet 2 for sensor, actuator, and door control |
+| **Building Automation Controller** | Built the **Building Automation Controller**, a companion networked I/O device, and connected it to Remeet 2 for sensor, actuator, and door control |
 
 **Skills**
 
@@ -74,7 +74,7 @@ Remeet 2 was a redesign of the full product, covering the hardware, power system
 | **Boot** | Slow boot | Boots from **onboard eMMC**, with an optimized kernel and system initialization |
 | **Audio** | — | **2 × 2.5 W stereo speakers** for voice announcements, alerts, chimes, and music |
 | **Lighting** | — | **High-power RGB LED** with intense, vivid light that follows the room theme |
-| **Expansion** | — | Syncs with the **IO Controller** over MQTT / REST API for sensors, actuators, and remote commands |
+| **Expansion** | — | Syncs with the **Building Automation Controller** over MQTT / REST API for sensors, actuators, and remote commands |
 
 ---
 
@@ -126,9 +126,9 @@ Remeet 2 was a redesign of the full product, covering the hardware, power system
 
 **Result.** The panel now gives spoken and audible feedback, and its lighting matches the look of each room.
 
-### 7. IO Controller integration
+### 7. Building Automation Controller integration
 
-**What I did.** I also designed the **IO Controller**, a separate network-connected device. Remeet 2 syncs with it and sends it commands over **MQTT** or **REST API**. Beyond door control, the IO Controller reads sensors and drives actuators, much like a PLC I/O module but connected over IP.
+**What I did.** I also designed the **Building Automation Controller**, a separate networked I/O device. Remeet 2 syncs with it and sends it commands over **MQTT** or **REST API**. Beyond door control, the controller reads sensors and drives actuators, much like a PLC I/O module but connected over IP.
 
 **Result.** A single meeting-room panel can also handle wider room and building automation.
 
@@ -150,7 +150,7 @@ Remeet 2 turns any meeting room into a managed space. The vertical display sits 
 - **Fast boot** from onboard eMMC
 - **2 × 2.5 W stereo speakers** for voice announcements, alerts, chimes, and music
 - **High-power RGB LED** with intense, vivid light that follows the room theme
-- **IO Controller integration** over MQTT and REST API
+- **Building Automation Controller integration** over MQTT and REST API
 - **Calendar integration** with Outlook, Google, and other calendar platforms
 
 **Meetings and rooms**
@@ -199,7 +199,7 @@ Remeet 2 turns any meeting room into a managed space. The vertical display sits 
 | Audio | Stereo, 2 × 2.5 W speakers |
 | Lighting | High-power RGB LED with intense, vivid output, themed to the room |
 | Connectivity | Wi-Fi or LAN |
-| Integration | IO Controller over MQTT / REST API |
+| Integration | Building Automation Controller over MQTT / REST API |
 | Calendar integration | Outlook, Google, and other calendar platforms |
 
 ---
@@ -260,7 +260,7 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    R2["Remeet 2 panel"] <-->|"MQTT / REST API"| IOC["IO Controller"]
+    R2["Remeet 2 panel"] <-->|"MQTT / REST API"| IOC["Building Automation<br/>Controller"]
     IOC --> LOCK["Door lock"]
     IOC --> SENS["Sensors"]
     IOC --> ACT["Actuators"]
@@ -281,7 +281,7 @@ flowchart LR
 - Cut **boot time** by moving to onboard eMMC and optimizing U-Boot, the kernel, and system initialization.
 - Integrated **fingerprint, RFID, and NFC** authentication. Customers also adopted the device as a time-and-attendance terminal.
 - Added **2 × 2.5 W stereo voice and audio output** and **themed high-power RGB lighting**.
-- Designed the **IO Controller** and connected it to Remeet 2 over **MQTT / REST API** for sensor, actuator, and door automation.
+- Designed the **Building Automation Controller** and connected it to Remeet 2 over **MQTT / REST API** for sensor, actuator, and door automation.
 - Wrote a **C++ / C / Bash device-driver abstraction layer** that gives application developers a stable interface to the hardware.
 
 ---
@@ -300,7 +300,7 @@ The public materials in this repository are the only parts shared here. To order
 
 ## Contact
 
-**Pourya Afshintabar**, Senior Embedded Systems (IoT) Engineer · Vienna, Austria
+**Pourya Afshintabar**, Senior Embedded Systems Engineer · Vienna, Austria
 
 Embedded C/C++ · Embedded Linux · Bare-metal (ARM Cortex-M) · IoT · Hardware design · Power electronics
 
