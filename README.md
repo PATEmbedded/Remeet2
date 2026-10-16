@@ -306,6 +306,6 @@ The public materials in this repository are the only parts shared here. To order
 
 Embedded C/C++ · Embedded Linux · Bare-metal (ARM Cortex-M) · IoT · Hardware design · Power electronics
 
-- Email: pouryaafshintabar@gmail.com
+- Email: pat.embedded@gmail.com
 - GitHub: [PATEmbedded](https://github.com/PATEmbedded)
 - LinkedIn: [pourya-afshintabar](https://www.linkedin.com/in/pourya-afshintabar/)
