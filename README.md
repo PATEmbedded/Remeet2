@@ -30,14 +30,15 @@
 
 **Senior Embedded Systems Engineer**, [Novaday Co.](https://novaday.ir/)
 
-I was the hands-on engineer behind Remeet 2. I owned the hardware **from concept to production**, wrote the low-level software for every sensor and actuator, developed a major part of the embedded software, and led the IoT networking that connects the device to the rest of the platform. The product itself is owned by Novaday Co.
+I was the hands-on engineer behind Remeet 2. I owned the hardware **from concept to production**, wrote the low-level software for every sensor and actuator, developed a major part of the embedded software, led the IoT networking that connects the device to the rest of the platform, and led the mechanical design and the production line from prototype to field deployment. The product itself is owned by Novaday Co.
 
 | Area | What I did |
 |------|------------|
 | **System architecture** | Defined the hardware architecture of Remeet 2 myself, from block diagram and component selection to the split between boards |
 | **Hardware design (end to end)** | Designed **two PCBs from scratch** and carried all hardware work from schematic and layout through bring-up and testing: fingerprint, RFID, and NFC readers, a rotatable vertical display, stereo audio, high-power RGB lighting, and onboard eMMC storage |
 | **Power electronics** | Designed the battery backup, charging, and fuel-gauge circuits, plus a protected input power stage with fault reporting to the CPU and stricter EMC/EMI design |
-| **Mechanical consolidation** | Replaced two left-hand and right-hand product variants with a single design that fits either side of the door |
+| **Mechanical design (led)** | Led the mechanical design: replaced two left-hand and right-hand product variants with one rotatable, symmetric enclosure that fits either side of the door |
+| **Production line (led)** | Led the production line from prototype to field deployment |
 | **Embedded Linux and boot** | Moved boot to onboard eMMC and tuned the kernel and system initialization to cut boot time |
 | **Device-driver layer** | Created a **C++ / C / Bash device-driver abstraction layer** that bridges application developers with low-level Linux services, **Device Tree**, and **U-Boot** |
 | **Low-level sensor and actuator software** | Programmed **every sensor and actuator** in the device's lower layer and wrote backend-ready drivers for each one, so the application and backend teams use them through a clean interface |
@@ -275,7 +276,8 @@ flowchart LR
 - Designed the **complete Remeet 2 hardware end to end**, including **two PCBs built from scratch** on a system architecture I defined.
 - Programmed **every low-level sensor and actuator** and wrote backend-ready drivers for each one.
 - Led the **IoT networking** for the product and developed a major part of the embedded software.
-- Merged two left-hand and right-hand product variants into **one rotatable design**, removing duplicate molds, PCBs, CNC programs, and enclosures and roughly halving the related tooling costs.
+- Led the **mechanical design** and merged two left-hand and right-hand product variants into **one rotatable design**, removing duplicate molds, PCBs, CNC programs, and enclosures and roughly halving the related tooling costs.
+- Led the **production line** from prototype to field deployment.
 - Designed a **4500 mAh battery backup** that runs the full system for about **3 hours** during outages, with charging, a fuel gauge, and on-screen battery status.
 - Built a **protected, monitored power input** with hardware fault reporting to the CPU and automatic switch-over to battery, and tightened the EMC/EMI design.
 - Cut **boot time** by moving to onboard eMMC and optimizing U-Boot, the kernel, and system initialization.
